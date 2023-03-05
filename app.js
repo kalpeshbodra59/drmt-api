@@ -3,9 +3,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("./app/mongoose");
 const routes = require("./app/routes");
 const cors = require("cors");
-const PORT = 5000;
 const app = express();
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://moonlit-pithivier-da5ced.netlify.app" }));
 
 mongoose.configure();
 
@@ -16,6 +15,6 @@ app.use(bodyParser.json());
 routes.declare(app);
 
 // Start the server
-app.listen(PORT, () => {
+app.listen(5000, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
