@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("./app/mongoose");
 const routes = require("./app/routes");
 const cors = require("cors");
-const PORT = precess.env.PORT || 5000;
+const PORT = 5000;
 const app = express();
 app.use(cors({ origin: "http://localhost:3000" }));
 
