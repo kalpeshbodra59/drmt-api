@@ -4,7 +4,7 @@ const mongoose = require("./app/mongoose");
 const routes = require("./app/routes");
 const cors = require("cors");
 const app = express();
-app.use(cors({ origin: "https://moonlit-pithivier-da5ced.netlify.app" }));
+app.use(cors({ origin: "https://moonlit-pithivier-da5ced.netlify.app/" }));
 
 mongoose.configure();
 
