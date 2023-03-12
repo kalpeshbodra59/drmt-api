@@ -3,7 +3,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const diamondSchema = new mongoose.Schema({
   date: Date,
-  lot_no: Number,
+  lot_no: String,
   total_diamond: Number,
   total_diamond_weight: Number,
   worked_diamond: Number,
