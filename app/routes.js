@@ -1,3 +1,4 @@
+const { addCredit, viewCredits } = require("../controllers/credit");
 const {
   addCustomer,
   viewCustomers,
@@ -20,6 +21,13 @@ const {
   updateUserById,
   deleteUserById,
 } = require("../controllers/user");
+const {
+  addWorker,
+  viewWorkers,
+  getWorkerById,
+  updateWorkerById,
+  deleteWorkerById,
+} = require("../controllers/worker");
 const middleware = require("../middleware");
 
 exports.declare = (app) => {
@@ -48,6 +56,24 @@ exports.declare = (app) => {
   app.put("/api/customers", middleware, updateCustomerById);
   // Delete a customer by id
   app.delete("/api/customers", middleware, deleteCustomerById);
+
+  // Worker
+  // Create a new worker
+  app.post("/api/workers", middleware, addWorker);
+  // Get all workers
+  app.get("/api/workers", middleware, viewWorkers);
+  // Get a single worker by id
+  app.get("/api/workers/:id", middleware, getWorkerById);
+  // Update a worker by id
+  app.put("/api/workers", middleware, updateWorkerById);
+  // Delete a worker by id
+  app.delete("/api/workers", middleware, deleteWorkerById);
+
+  // Credit
+  // Create a new credit
+  app.post("/api/credits", middleware, addCredit);
+  // Get all credits
+  app.get("/api/credits", middleware, viewCredits);
 
   // Diamond
   // Create a new diamond
