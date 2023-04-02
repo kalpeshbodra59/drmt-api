@@ -5,6 +5,7 @@ const routes = require("./app/routes");
 const cors = require("cors");
 const app = express();
 // http://localhost:3000
+// https://moonlit-pithivier-da5ced.netlify.app
 app.use(cors({ origin: "https://moonlit-pithivier-da5ced.netlify.app" }));
 
 mongoose.configure();
