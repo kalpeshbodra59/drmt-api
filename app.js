@@ -6,8 +6,8 @@ const cors = require("cors");
 const app = express();
 // http://localhost:3000
 // https://moonlit-pithivier-da5ced.netlify.app
-// working server url: https://drmt-www.vercel.app/
-app.use(cors({ origin: "https://drmt-www.vercel.app/" }));
+// working server url: https://drmt-www.vercel.app
+app.use(cors({ origin: "https://drmt-www.vercel.app" }));
 
 mongoose.configure();
 
